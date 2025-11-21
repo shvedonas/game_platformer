@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,9 +12,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Sceleton
+  - Player
   - 
   - 
   - 
@@ -44,8 +45,17 @@ TagManager:
   - name: background
     uniqueID: 3445417865
     locked: 0
-  - name: ground
+  - name: between
+    uniqueID: 2299354867
+    locked: 0
+  - name: groundColider
     uniqueID: 1110533011
+    locked: 0
+  - name: ground
+    uniqueID: 3472475939
+    locked: 0
+  - name: things
+    uniqueID: 4113348647
     locked: 0
   - name: character
     uniqueID: 527607059
