@@ -15,7 +15,7 @@ TagManager:
   - Enemy
   - Sceleton
   - Player
-  - 
+  - UI
   - 
   - 
   - 
@@ -59,4 +59,10 @@ TagManager:
     locked: 0
   - name: character
     uniqueID: 527607059
+    locked: 0
+  - name: ui
+    uniqueID: 648490779
+    locked: 0
+  - name: uiSettings
+    uniqueID: 46044781
     locked: 0

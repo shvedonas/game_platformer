@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 
@@ -35,8 +36,8 @@ public class  Knight: Entity
     private void Update()
     {
         AnimatorForCharacters();
-
-        if (Input.GetButtonDown("Fire1"))
+        Debug.Log(EventSystem.current.IsPointerOverGameObject());
+        if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
         {
             anim.SetTrigger("Attack");
             Debug.Log("Запуск атаки через триггер");

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 
@@ -36,7 +37,7 @@ public class Witch : Entity
     {
         AnimatorForCharacters();
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
         {
             anim.SetTrigger("AttackWitch");
             Debug.Log("Запуск атаки через триггер");
