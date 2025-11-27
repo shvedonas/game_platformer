@@ -98,7 +98,37 @@ public class Entity : MonoBehaviour
             Die();
     }
 
+    public void SaveEntityData(Vector3? overridePosition = null)
+    {
+        Vector3 positionToSave = overridePosition ?? transform.position;
+
+        string myType = this.GetType().Name;
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        SaveData data = new SaveData(
+            GameSession.CurrentSlotIndex,
+            currentScene,
+            myType,
+            positionToSave,
+            health, 
+            damage
+        );
+
+        DatabaseManager.instance.SaveGame(data);
+        Debug.Log("Игра сохранена на чекпоинте!");
+    }
+
+    public void LoadEntityData(SaveData data)
+    {
+        transform.position = new Vector3(data.PositionX, data.PositionY, data.PositionZ);
+        health = data.Health;
+        damage = data.Damage;
+        Debug.Log("Персонаж загружен из базы!");
+    }
+
     public virtual void Damage()
     {
     }
+
+
 }

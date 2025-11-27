@@ -36,7 +36,6 @@ public class  Knight: Entity
     private void Update()
     {
         AnimatorForCharacters();
-        Debug.Log(EventSystem.current.IsPointerOverGameObject());
         if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
         {
             anim.SetTrigger("Attack");
