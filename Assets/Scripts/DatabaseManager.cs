@@ -1,7 +1,14 @@
-using UnityEngine;
 using SQLite4Unity3d;
+using System.Collections.Generic;
 using System.IO;
-
+using System.Linq;
+using UnityEngine;
+public class DestroyedObjectDB
+{
+    [PrimaryKey]
+    public string UniqueId { get; set; } 
+    public int SaveSlotId { get; set; }
+}
 public class DatabaseManager : MonoBehaviour
 {
     public static DatabaseManager instance;
@@ -17,6 +24,8 @@ public class DatabaseManager : MonoBehaviour
             string dbPath = Path.Combine(Application.persistentDataPath, _dbName);
             _connection = new SQLiteConnection(dbPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create);
             _connection.CreateTable<SaveData>();
+            _connection.CreateTable<InventoryItemDB>();
+            _connection.CreateTable<DestroyedObjectDB>();
         }
         else
         {
@@ -43,5 +52,36 @@ public class DatabaseManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         _connection?.Close();
+    }
+
+    public void SaveInventory(int slotId, List<InventoryItemDB> items)
+    {
+        _connection.Execute("DELETE FROM InventoryItemDB WHERE SaveSlotId = ?", slotId);
+
+        _connection.InsertAll(items);
+        Debug.Log("Инвентарь сохранен!");
+    }
+
+    public List<InventoryItemDB> LoadInventory(int slotId)
+    {
+        return _connection.Table<InventoryItemDB>()
+                          .Where(x => x.SaveSlotId == slotId)
+                          .ToList();
+    }
+    public void AddDestroyedObject(string uniqueId)
+    {
+        var obj = new DestroyedObjectDB
+        {
+            UniqueId = uniqueId + "_" + GameSession.CurrentSlotIndex, 
+            SaveSlotId = GameSession.CurrentSlotIndex
+        };
+        _connection.InsertOrReplace(obj);
+    }
+
+    public bool IsObjectDestroyed(string uniqueId)
+    {
+        string key = uniqueId + "_" + GameSession.CurrentSlotIndex;
+        var obj = _connection.Find<DestroyedObjectDB>(key);
+        return obj != null;
     }
 }

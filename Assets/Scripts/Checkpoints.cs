@@ -54,5 +54,9 @@ public class Checkpoint : Entity
             savePos = spawnPoint.position;
         }
         player.SaveEntityData(savePos);
+        if (InventoryManager.instance != null)
+        {
+            InventoryManager.instance.SaveInventoryToDB();
+        }
     }
 }
