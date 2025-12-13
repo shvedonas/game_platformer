@@ -59,7 +59,15 @@ public class Entity : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log($"{name} погиб!");
-        Destroy(gameObject);
+
+        if (Application.isPlaying)
+        {
+            Destroy(gameObject); 
+        }
+        else
+        {
+            DestroyImmediate(gameObject); 
+        }
     }
 
     public void AnimatorForCharacters()
@@ -88,10 +96,11 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public virtual void TakeDamage(Entity attacer)
+    public virtual void TakeDamage(Entity attacker)
     {
+        if (isDead) return;
 
-        health -= attacer.damage;
+        health -= attacker.damage;
         Debug.Log($"{name} получил {damage} урона, осталось HP {health}");
 
         if (health <= 0)

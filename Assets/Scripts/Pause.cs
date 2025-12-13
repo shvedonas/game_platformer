@@ -39,7 +39,6 @@ public class Pause : MonoBehaviour
         canvasMenu.SetActive(true);
         if (menuAnimator != null)
             menuAnimator.SetTrigger(showTrigger);
-        menuAnimator.SetTrigger(hideTrigger);
     }
 
 }

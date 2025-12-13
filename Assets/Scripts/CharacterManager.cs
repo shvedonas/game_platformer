@@ -7,7 +7,7 @@ public class SwitchCharacter : MonoBehaviour
 {
     public static GameObject ActiveCharacter { get; private set; }
 
-    [Header("Персонажи (перетяни объекты со сцены)")]
+    [Header("Персонажи")]
     [SerializeField] private GameObject knight;
     [SerializeField] private GameObject witch;
     [SerializeField] private GameObject cat;
