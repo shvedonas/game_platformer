@@ -136,8 +136,8 @@ public class movingmosner : Entity
 
     private IEnumerator DeathRoutine()
     {
-        anim.SetTrigger("Die"); 
-
+        anim.SetTrigger("Die");
+        yield return new WaitForSeconds(1.0f);
         Collider2D[] colliders = GetComponentsInChildren<Collider2D>();
         foreach (Collider2D collider in colliders)
         {

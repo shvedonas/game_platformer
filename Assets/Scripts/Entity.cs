@@ -1,61 +1,149 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Entity : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] public float speed = 5.0f;
+    public float horizontalMovement;
+
+    [Header("Jump")]
     [SerializeField] private float jumpForce = 5.0f;
+
+    [Header("GroundCheck")]
+    public Transform checkGround;
+    public Vector2 groundCheckSize= new Vector2(0.5f,0.05f);
+    public LayerMask groundLayer;
+
+    [Header("WallCheck")]
+    public Transform checkWall;
+    public Vector2 wallCheckSize = new Vector2(0.5f, 0.05f);
+    public LayerMask wallLayer;
+    public bool side = true;
+
+    [Header("WallMovement")]
+    public float wallSlideSpeed;
+    public bool isWallSliding;
+    public bool isWallJumping;
+    float wallJumpDirection;
+    float wallJumpTime = 0.5f;
+    float wallJumpTimer;
+    public Vector2 wallJumpPower = new Vector2(5f,12f);
+
+    [Header("Attack")]
     [SerializeField] public int health = 100;
     [SerializeField] public int damage = 0;
+
+    [Header("Combat")]
+    public bool isAttacking;
 
     public Rigidbody2D rb;
     public Animator anim;
     public SpriteRenderer sprite;
-    public bool isGround = false;
     public bool jumpRequest;
     public bool isInitiallyFlipped;
     public bool isDead = false;
-    public void Walk()
+    public void Move(InputAction.CallbackContext context)
     {
-        Vector3 dir = transform.right * Input.GetAxis("Horizontal");
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-        if (isInitiallyFlipped)
+        horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (CheckGround()) {
+            if (context.performed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                anim.SetTrigger("jump");
+            }
+        }
+        if (context.performed && wallJumpTimer > 0f) {
+            isWallJumping = true;
+            rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+            wallJumpTimer = 0f;
+            anim.SetTrigger("jump");
+            if (transform.localScale.x != wallJumpDirection) {
+                side = !side;
+                Vector3 ls = transform.localScale;
+                ls.x *= -1f;
+                transform.localScale = ls;
+            }
+            Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f);
+        }
+    }
+
+    public void Flip()
+    {
+        if (side && horizontalMovement < 0 || !side && horizontalMovement > 0) {
+            side = !side;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
+    }
+    public bool CheckGround()
+    {
+        if (Physics2D.OverlapBox(checkGround.position,groundCheckSize,0,groundLayer))
         {
-            sprite.flipX = dir.x > 0.0f;
+            return true;
+        }
+        return false;
+    }
+    
+    public bool CheckWall()
+    {
+        if (Physics2D.OverlapBox(checkWall.position, wallCheckSize, 0, wallLayer))
+        {
+            return true;
         }
         else
         {
-            sprite.flipX = dir.x < 0.0f;
+            return false;
         }
     }
 
-    public void Jump()
+    public void SlowSlide()
     {
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if (!CheckGround() && CheckWall() && horizontalMovement != 0)
+        {
+            isWallSliding = true;
+            rb.velocity = new Vector2 (rb.velocity.x, Mathf.Max(rb.velocity.y, -wallSlideSpeed));   
+        }
+        else
+        {
+            isWallSliding = false;
+        }
     }
 
-    public void checkGround()
+    public void CancelWallJump()
     {
-        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.3f);
-        isGround = collider.Length > 1;
+        isWallJumping = false;
     }
 
-
-    public enum States
+    public void JumpSlide()
     {
-        idle,
-        walk,
-        jump,
-        die
+        if (isWallSliding) {
+            isWallJumping = false;
+            wallJumpDirection = -transform.localScale.x;
+            wallJumpTimer = wallJumpTime;
+            CancelInvoke(nameof(CancelWallJump));
+        }
+        else if(wallJumpTimer > 0f)
+        {
+            wallJumpTimer -= Time.deltaTime;
+        }
+
     }
 
-    public States state
+    public virtual void PerformAttack()
     {
-        get { return (States)anim.GetInteger("state"); }
-        set { anim.SetInteger("state", (int)value); }
     }
 
+    public void FinishAttack()
+    {
+        isAttacking = false;
+    }
+    
     public virtual void Die()
     {
         Debug.Log($"{name} погиб!");
@@ -70,31 +158,6 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public void AnimatorForCharacters()
-    {
-        if (isGround && Input.GetButtonDown("Jump"))
-        {
-            jumpRequest = true;
-        }
-
-        if (Input.GetButton("Horizontal"))
-        {
-            Walk();
-        }
-
-        if (!isGround)
-        {
-            state = States.jump;
-        }
-        else if (Input.GetButton("Horizontal"))
-        {
-            state = States.walk;
-        }
-        else
-        {
-            state = States.idle;
-        }
-    }
 
     public virtual void TakeDamage(Entity attacker)
     {
@@ -138,6 +201,7 @@ public class Entity : MonoBehaviour
     public virtual void Damage()
     {
     }
+
 
 
 }

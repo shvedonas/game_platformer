@@ -24,18 +24,18 @@ public class Cat : Entity
 
     private void FixedUpdate()
     {
-        checkGround();
+        //checkGround();
 
         if (jumpRequest)
         {
-            Jump();
+            //Jump();
             jumpRequest = false;
         }
     }
 
     private void Update()
     {
-        AnimatorForCharacters();
+        //AnimatorForCharacters();
 
         if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
         {
