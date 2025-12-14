@@ -1,3 +1,4 @@
+using InventorySystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,7 +55,6 @@ public class Entity : MonoBehaviour
             if (context.performed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                anim.SetTrigger("jump");
             }
         }
         if (context.performed && wallJumpTimer > 0f) {

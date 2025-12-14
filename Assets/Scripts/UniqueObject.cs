@@ -6,6 +6,10 @@ public class UniqueObject : MonoBehaviour
 
     private void Start()
     {
+        if (GameSession.IsNewGame)
+        {
+            return;
+        }
         if (DatabaseManager.instance.IsObjectDestroyed(uniqueId))
         {
             Destroy(gameObject); 

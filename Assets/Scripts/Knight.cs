@@ -13,14 +13,13 @@ public class  Knight: Entity
     [SerializeField] private Vector2 attackSize = new Vector2(1.5f, 1.0f);
     [SerializeField] private float attackForwardOffset = 1.0f;
     [SerializeField] private LayerMask enemyLayer;
-    [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private float attackCooldown = 50.0f;
 
     [Header("Combat Settings")]
     private float lastAttackTime;
 
     private void Awake()
     {
-        damage = 20;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();

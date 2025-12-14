@@ -1,5 +1,5 @@
+using System.Xml;
 using UnityEngine;
-
 public class PickableItem : MonoBehaviour
 {
     [Header("Настройки предмета")]
@@ -33,7 +33,7 @@ public class PickableItem : MonoBehaviour
     }
 
     private void PickUp()
-    {
+    {    
         if (InventoryManager.instance != null)
         {
             bool added = InventoryManager.instance.AddItem(itemId);

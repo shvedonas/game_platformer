@@ -3,78 +3,73 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 
 public class Witch : Entity
 {
-    [SerializeField] private Vector2 attackSize = new Vector2(5.0f, 1.0f);
+    [Header("Witch Combat Settings")]
+    [SerializeField] private Vector2 attackSize = new Vector2(1.5f, 1.0f);
     [SerializeField] private float attackForwardOffset = 1.0f;
-    [SerializeField] private float attackUpOffset = 0.5f;
-    [SerializeField] private LayerMask Enemy;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private float attackCooldown = 50.0f;
+
+    [Header("Combat Settings")]
+    private float lastAttackTime;
+
 
     private void Awake()
     {
-        damage = 10;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         isInitiallyFlipped = sprite.flipX;
     }
 
-    private void FixedUpdate()
-    {
-        //checkGround();
-
-        if (jumpRequest)
-        {
-            //Jump();
-            jumpRequest = false;
-        }
-    }
-
     private void Update()
     {
-        //AnimatorForCharacters();
 
-        if (Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
+        rb.velocity = new Vector2(speed * horizontalMovement, rb.velocity.y);
+        Flip();
+        anim.SetFloat("magnitude", Mathf.Abs(rb.velocity.x));
+    }
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking)
         {
-            anim.SetTrigger("AttackWitch");
-            Debug.Log("Запуск атаки через триггер");
-            Damage();
+            isAttacking = true;
+            lastAttackTime = Time.time;
+            anim.SetTrigger("attack");
         }
     }
 
-    public override void Damage()
+    public override void PerformAttack()
     {
-        float direction = sprite.flipX ? -1f : 1f;
+        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        Vector2 attackPos = (Vector2)transform.position + new Vector2(attackForwardOffset * direction, 0.5f);
 
-        Vector2 attackPosition = (Vector2)transform.position + new Vector2((attackForwardOffset + attackSize.x / 2f) * direction, attackUpOffset);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(attackPos, attackSize, 0f, enemyLayer);
 
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPosition, attackSize, 0f, Enemy);
-
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (Collider2D hit in hits)
         {
-            Entity target = enemy.GetComponent<Entity>();
+            if (hit.gameObject == gameObject) continue;
+
+            Entity target = hit.GetComponent<Entity>();
             if (target != null)
             {
                 target.TakeDamage(this);
-                Debug.Log($"{name} атаковал {target.name} на {damage} урона, осталось HP {target.health}");
             }
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        if (sprite == null)
-            sprite = GetComponentInChildren<SpriteRenderer>();
-
-        if (sprite == null) return;
-
         float direction = sprite.flipX ? -1f : 1f;
-        Vector2 attackPosition = (Vector2)transform.position + new Vector2(attackForwardOffset * direction, attackUpOffset);
-
+        Vector2 attackPosition = (Vector2)transform.position + new Vector2(attackForwardOffset * direction, 0.5f);
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPosition, attackSize);
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireCube(checkGround.position, groundCheckSize);
     }
 }

@@ -38,9 +38,11 @@ public class Checkpoint : Entity
 
     private void ActivateCheckpoint(Entity player)
     {
+        Vector3 savePos = transform.position;
         if (!isActivated)
         {
             isActivated = true;
+            savePos = transform.position;
             if (spriteRenderer != null && activeSprite != null)
             {
                 spriteRenderer.sprite = activeSprite;
@@ -48,8 +50,7 @@ public class Checkpoint : Entity
             Debug.Log("Чекпоинт активирован!");
         }
 
-        Vector3 savePos = transform.position;
-        if (spawnPoint != null)
+        if (spawnPoint != null&&!isActivated)
         {
             savePos = spawnPoint.position;
         }

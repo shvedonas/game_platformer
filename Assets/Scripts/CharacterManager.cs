@@ -18,7 +18,7 @@ public class SwitchCharacter : MonoBehaviour
 
     private GameObject currentCharacter;
 
-    private void Start()
+    private IEnumerator Start()
     {
         Time.timeScale = 1.0f;
 
@@ -26,51 +26,51 @@ public class SwitchCharacter : MonoBehaviour
         if (witch) witch.SetActive(false);
         if (cat) cat.SetActive(false);
 
-        string characterTypeToLoad = "Witch";
-        Vector3 positionToLoad = Vector3.zero;
-
-        if (startPoint != null)
-            positionToLoad = startPoint.position;
-
-        SaveData data = null;
-
-        if (!GameSession.IsNewGame)
+        if (DatabaseManager.instance == null)
         {
-            data = DatabaseManager.instance.LoadGame(GameSession.CurrentSlotIndex);
+            Debug.LogWarning("База данных не найдена");
+            ActivateCharacter(knight);
+            yield break; 
         }
 
-        if (data != null)
+        if (GameSession.IsNewGame)
         {
-            Debug.Log($"[SwitchCharacter] Загрузка сохранения. Персонаж: {data.PlayerType}");
-            characterTypeToLoad = data.PlayerType;
-            positionToLoad = new Vector3(data.PositionX, data.PositionY, data.PositionZ);
+            DatabaseManager.instance.ClearSaveSlot(GameSession.CurrentSlotIndex);
+            GameObject defaultChar = knight;
+            if (startPoint != null) defaultChar.transform.position = startPoint.position;
+            ActivateCharacter(defaultChar);
+            Entity entity = defaultChar.GetComponent<Entity>();
+            if (entity != null)
+            {
+                entity.SaveEntityData();
+            }
+            GameSession.IsNewGame = false;
         }
         else
         {
-            Debug.Log($"[SwitchCharacter] Новая игра. Выбран: {GameSession.SelectedCharacterType}");
-            if (!string.IsNullOrEmpty(GameSession.SelectedCharacterType))
+            SaveData data = DatabaseManager.instance.LoadGame(GameSession.CurrentSlotIndex);
+
+            if (data != null)
             {
-                characterTypeToLoad = GameSession.SelectedCharacterType;
+                GameObject targetChar = GetCharacterObjectByType(data.PlayerType);
+                if (targetChar == null) targetChar = knight; 
+
+                ActivateCharacter(targetChar);
+
+                Entity entity = targetChar.GetComponent<Entity>();
+                if (entity != null)
+                {
+                    entity.LoadEntityData(data);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Сейв не найден.");
+                ActivateCharacter(knight);
+                if (startPoint != null) knight.transform.position = startPoint.position;
+                knight.GetComponent<Entity>().SaveEntityData();
             }
         }
-
-        GameObject targetInfo = GetCharacterObjectByType(characterTypeToLoad);
-
-        if (targetInfo == null) targetInfo = witch != null ? witch : knight;
-
-        targetInfo.transform.position = positionToLoad;
-
-        if (data != null)
-        {
-            Entity entity = targetInfo.GetComponent<Entity>();
-            if (entity != null)
-            {
-                entity.health = data.Health;
-                entity.damage = data.Damage;
-            }
-        }
-
-        ActivateCharacter(targetInfo);
     }
 
     private void Update()

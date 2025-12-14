@@ -78,6 +78,21 @@ public class DatabaseManager : MonoBehaviour
         _connection.InsertOrReplace(obj);
     }
 
+    public void ClearSaveSlot(int slotId)
+    {
+        try
+        {
+            _connection.Execute("DELETE FROM SaveData WHERE SlotId = ?", slotId);
+            _connection.Execute("DELETE FROM InventoryItemDB WHERE SaveSlotId = ?", slotId);
+            _connection.Execute("DELETE FROM DestroyedObjectDB WHERE SaveSlotId = ?", slotId);
+
+            Debug.Log($"[Database] Слот {slotId} очищен.");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"Ошибка при очистке слота: {e.Message}.");
+        }
+    }
     public bool IsObjectDestroyed(string uniqueId)
     {
         string key = uniqueId + "_" + GameSession.CurrentSlotIndex;
