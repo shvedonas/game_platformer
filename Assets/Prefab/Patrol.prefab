@@ -120,16 +120,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  horizontalMovement: 0
   jumpForce: 5
-  health: 35
+  checkGround: {fileID: 0}
+  groundCheckSize: {x: 0.5, y: 0.05}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  checkWall: {fileID: 0}
+  wallCheckSize: {x: 0.5, y: 0.05}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  side: 1
+  wallSlideSpeed: 0
+  isWallSliding: 0
+  isWallJumping: 0
+  wallJumpPower: {x: 5, y: 12}
   damage: 15
+  isAttacking: 0
   rb: {fileID: 0}
   anim: {fileID: 0}
+  effect: {fileID: 0}
   sprite: {fileID: 0}
-  isGround: 0
   jumpRequest: 0
   isInitiallyFlipped: 0
   isDead: 0
+  maxHealth: 5
+  health: 35
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   attackSize: {x: 1.5, y: 1}
@@ -150,7 +168,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2672994160183006224}
   - component: {fileID: 5579008809032825589}
-  - component: {fileID: 1388091667575209512}
   m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
@@ -225,24 +242,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1388091667575209512
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254641507414224127}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 18338ceef65c3654091d96138da3262f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

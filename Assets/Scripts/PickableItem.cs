@@ -34,9 +34,9 @@ public class PickableItem : MonoBehaviour
 
     private void PickUp()
     {    
-        if (InventoryManager.instance != null)
+        if (InventoryManager.Instance != null)
         {
-            bool added = InventoryManager.instance.AddItem(itemId);
+            bool added = InventoryManager.Instance.AddItem(itemId);
 
             if (added)
             {

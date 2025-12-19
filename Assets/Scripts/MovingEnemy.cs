@@ -59,7 +59,6 @@ public class movingmosner : Entity
     private void StartAttack()
     {
         isAttacking = true;
-       //state = States.jump;
         anim.SetTrigger("AttackSceleton");
         lastAttackTime = Time.time;
 
@@ -96,7 +95,6 @@ public class movingmosner : Entity
 
     private void Patrol()
     {
-        //state = States.walk;
 
         Vector3 destination = movingToB ? pointB.position : pointA.position;
         Vector3 direction = destination - transform.position;

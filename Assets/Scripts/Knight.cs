@@ -18,6 +18,7 @@ public class  Knight: Entity
     [Header("Combat Settings")]
     private float lastAttackTime;
 
+    public AudioClip attackSound;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,12 +44,13 @@ public class  Knight: Entity
     }
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking)
+        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking && !isDead)
         {
             isAttacking = true;
             lastAttackTime = Time.time;
             anim.SetTrigger("attack");
-        }
+            AudioManager.Instance.PlaySFX(attackSound);
+         }
     }
 
     public override void PerformAttack()

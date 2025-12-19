@@ -80,29 +80,42 @@ public class SwitchCharacter : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Alpha3)) SwitchC(cat);
     }
 
-    private void ActivateCharacter(GameObject character)
+    public void ActivateCharacter(GameObject character)
     {
         if (character == null) return;
 
         if (currentCharacter != null)
-        {
             currentCharacter.SetActive(false);
-        }
 
         currentCharacter = character;
         currentCharacter.SetActive(true);
         ActiveCharacter = currentCharacter;
 
         if (virtualCamera != null)
-        {
             virtualCamera.Follow = currentCharacter.transform;
+
+  
+        if (CharacterUIManager.Instance != null)
+        {
+            CharacterUIManager.Instance.UpdateFrames(currentCharacter);
+        }
+
+ 
+        Entity entity = currentCharacter.GetComponent<Entity>();
+        if (entity != null && CharacterUIManager.Instance != null)
+        {
+            CharacterUIManager.Instance.SetCharacter(entity);
         }
     }
 
     private void SwitchC(GameObject targetCharacter)
     {
         if (targetCharacter == null || targetCharacter == currentCharacter) return;
-
+        Entity currentEntity = currentCharacter.GetComponent<Entity>();
+        if (currentEntity != null && currentEntity.isDead)
+        {
+            return;
+        }
         Vector3 lastPosition = currentCharacter.transform.position;
 
         BoxCollider2D newCollider = targetCharacter.GetComponent<BoxCollider2D>();
@@ -128,7 +141,7 @@ public class SwitchCharacter : MonoBehaviour
         Debug.Log($"Переключились на: {targetCharacter.name}");
     }
 
-    private GameObject GetCharacterObjectByType(string typeName)
+    public GameObject GetCharacterObjectByType(string typeName)
     {
         string type = typeName.ToLower();
 

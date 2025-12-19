@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.EventSystems.EventTrigger;
 public class Entity : MonoBehaviour
 {
     [Header("Movement")]
@@ -33,7 +34,6 @@ public class Entity : MonoBehaviour
     public Vector2 wallJumpPower = new Vector2(5f,12f);
 
     [Header("Attack")]
-    [SerializeField] public int health = 100;
     [SerializeField] public int damage = 0;
 
     [Header("Combat")]
@@ -41,27 +41,34 @@ public class Entity : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anim;
+    public ParticleSystem effect;
     public SpriteRenderer sprite;
     public bool jumpRequest;
     public bool isInitiallyFlipped;
     public bool isDead = false;
+    public int maxHealth = 5;
+    public int health;
     public void Move(InputAction.CallbackContext context)
     {
+        if(isDead == false)
         horizontalMovement = context.ReadValue<Vector2>().x;
     }
     public void Jump(InputAction.CallbackContext context)
     {
         if (CheckGround()) {
-            if (context.performed)
+            if (context.performed && !isDead)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                anim.SetTrigger("jump");
+                effect.Play();
             }
         }
-        if (context.performed && wallJumpTimer > 0f) {
+        if (context.performed && wallJumpTimer > 0f && !isDead) {
             isWallJumping = true;
             rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpTimer = 0f;
             anim.SetTrigger("jump");
+            effect.Play();
             if (transform.localScale.x != wallJumpDirection) {
                 side = !side;
                 Vector3 ls = transform.localScale;
@@ -79,6 +86,10 @@ public class Entity : MonoBehaviour
             Vector3 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
+            if (rb.velocity.y != 0)
+            {
+                effect.Play();
+            }
         }
     }
     public bool CheckGround()
@@ -146,16 +157,13 @@ public class Entity : MonoBehaviour
     
     public virtual void Die()
     {
-        Debug.Log($"{name} погиб!");
+        if (isDead) return;
 
-        if (Application.isPlaying)
-        {
-            Destroy(gameObject); 
-        }
-        else
-        {
-            DestroyImmediate(gameObject); 
-        }
+        isDead = true;
+        rb.simulated = false; 
+        anim.SetTrigger("Dead");
+
+        StartCoroutine(RespawnManager.Instance.DieSequence(this, 1f));
     }
 
 
@@ -164,7 +172,12 @@ public class Entity : MonoBehaviour
         if (isDead) return;
 
         health -= attacker.damage;
-        Debug.Log($"{name} получил {damage} урона, осталось HP {health}");
+
+        if (CharacterUIManager.Instance != null &&
+            SwitchCharacter.ActiveCharacter == gameObject)
+        {
+            CharacterUIManager.Instance.OnHealthChanged(health);
+        }
 
         if (health <= 0)
             Die();
@@ -197,7 +210,6 @@ public class Entity : MonoBehaviour
         damage = data.Damage;
         Debug.Log("Персонаж загружен из базы!");
     }
-
     public virtual void Damage()
     {
     }

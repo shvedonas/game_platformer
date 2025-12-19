@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour
         GameSession.IsNewGame = false; 
         SceneManager.LoadScene("LoadScene"); 
     }
+
+    public void SettingMenu()
+    {
+        SceneManager.LoadScene("SettingScene");
+    }
 }

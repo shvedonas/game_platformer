@@ -17,7 +17,7 @@ public class InventorySlot
 }
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager instance;
+    public static InventoryManager Instance;
 
     [Header("UI")]
     public GameObject inventoryPanel;
@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
         inventoryPanel.SetActive(false);
         for (int i = 0; i < slots.Length; i++) slots[i] = new InventorySlot();
     }
