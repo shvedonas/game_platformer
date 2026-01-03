@@ -59,5 +59,6 @@ public class Checkpoint : Entity
         {
             InventoryManager.Instance.SaveInventoryToDB();
         }
+        DatabaseManager.instance.CommitDestroyedObjects();
     }
 }

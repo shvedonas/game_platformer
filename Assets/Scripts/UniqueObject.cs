@@ -3,7 +3,6 @@ using UnityEngine;
 public class UniqueObject : MonoBehaviour
 {
     public string uniqueId;
-
     private void Start()
     {
         if (GameSession.IsNewGame)
@@ -12,7 +11,7 @@ public class UniqueObject : MonoBehaviour
         }
         if (DatabaseManager.instance.IsObjectDestroyed(uniqueId))
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 

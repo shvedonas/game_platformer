@@ -1,4 +1,5 @@
 using InventorySystem;
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class Entity : MonoBehaviour
     public Vector2 wallJumpPower = new Vector2(5f,12f);
 
     [Header("Attack")]
-    [SerializeField] public int damage = 0;
+    [SerializeField] public int damage = 3;
 
     [Header("Combat")]
     public bool isAttacking;
@@ -48,6 +49,9 @@ public class Entity : MonoBehaviour
     public bool isDead = false;
     public int maxHealth = 5;
     public int health;
+    public int count = 0;
+    public GameObject doubleJumpCharacter;
+    private bool isHurting;
     public void Move(InputAction.CallbackContext context)
     {
         if(isDead == false)
@@ -55,11 +59,12 @@ public class Entity : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (CheckGround()) {
-            if (context.performed && !isDead)
+          if (CheckGround() || count == 0 && SwitchCharacter.ActiveCharacter == doubleJumpCharacter) {
+            if (context.performed && !isDead && count<=2)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 anim.SetTrigger("jump");
+                count++;
                 effect.Play();
             }
         }
@@ -96,6 +101,7 @@ public class Entity : MonoBehaviour
     {
         if (Physics2D.OverlapBox(checkGround.position,groundCheckSize,0,groundLayer))
         {
+            count = 0;
             return true;
         }
         return false;
@@ -160,19 +166,38 @@ public class Entity : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
-        rb.simulated = false; 
+        isWallSliding = false;
+        anim.SetBool("isWallSliding", false);
         anim.SetTrigger("Dead");
+        gameObject.layer = LayerMask.NameToLayer("Dead");
 
+        rb.velocity = new Vector2(0, rb.velocity.y);
+
+        StartCoroutine(DisablePhysicsAfterLanding());
         StartCoroutine(RespawnManager.Instance.DieSequence(this, 1f));
     }
-
+    private IEnumerator DisablePhysicsAfterLanding()
+    {
+        while (!CheckGround())
+        {
+            yield return null; 
+        }
+        yield return new WaitForSeconds(0.1f);
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true; 
+        rb.simulated = false; 
+    }
 
     public virtual void TakeDamage(Entity attacker)
     {
-        if (isDead) return;
+       
+        if (isAttacking)
+        {
+            isAttacking = false;
+            anim.ResetTrigger("attack");
+        }
 
         health -= attacker.damage;
-
         if (CharacterUIManager.Instance != null &&
             SwitchCharacter.ActiveCharacter == gameObject)
         {
@@ -180,9 +205,28 @@ public class Entity : MonoBehaviour
         }
 
         if (health <= 0)
+        {
             Die();
+            return;
+        }
+
+        if (isHurting)
+        {
+            StopCoroutine("HurtRoutine");
+        }
+        StartCoroutine("HurtRoutine");
     }
 
+    private IEnumerator HurtRoutine()
+    {
+        isHurting = true;
+
+        anim.SetTrigger("hurt");
+        yield return new WaitForSeconds(0.4f);
+
+        isHurting = false;
+
+    }
     public void SaveEntityData(Vector3? overridePosition = null)
     {
         Vector3 positionToSave = overridePosition ?? transform.position;

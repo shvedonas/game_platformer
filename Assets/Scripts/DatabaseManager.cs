@@ -14,7 +14,7 @@ public class DatabaseManager : MonoBehaviour
     public static DatabaseManager instance;
     private SQLiteConnection _connection;
     private string _dbName = "GameSave.db";
-
+    private HashSet<string> _pendingDestroyedObjects = new HashSet<string>();
     private void Awake()
     {
         if (instance == null)
@@ -93,10 +93,46 @@ public class DatabaseManager : MonoBehaviour
             Debug.LogWarning($"Ошибка при очистке слота: {e.Message}.");
         }
     }
+    //Добавляем во временный список 
+    public void MarkAsDestroyedTemporary(string uniqueId)
+    {
+        string fullId = uniqueId + "_" + GameSession.CurrentSlotIndex;
+        if (!_pendingDestroyedObjects.Contains(fullId))
+        {
+            _pendingDestroyedObjects.Add(fullId);
+            Debug.Log($"Объект {fullId} добавлен в список ожидания сохранения.");
+        }
+    }
+
+    //Фиксируем изменения в БД 
+    public void CommitDestroyedObjects()
+    {
+        foreach (string fullId in _pendingDestroyedObjects)
+        {
+            var obj = new DestroyedObjectDB
+            {
+                UniqueId = fullId,
+                SaveSlotId = GameSession.CurrentSlotIndex
+            };
+            _connection.InsertOrReplace(obj);
+        }
+        _pendingDestroyedObjects.Clear();
+    }
+
+    //Очищаем временный список 
+    public void ClearPendingObjects()
+    {
+        _pendingDestroyedObjects.Clear();
+    }
+
+    // Проверка уничтожен ли объект 
     public bool IsObjectDestroyed(string uniqueId)
     {
-        string key = uniqueId + "_" + GameSession.CurrentSlotIndex;
-        var obj = _connection.Find<DestroyedObjectDB>(key);
+        string fullId = uniqueId + "_" + GameSession.CurrentSlotIndex;
+
+        if (_pendingDestroyedObjects.Contains(fullId)) return true;
+
+        var obj = _connection.Find<DestroyedObjectDB>(fullId);
         return obj != null;
     }
 }

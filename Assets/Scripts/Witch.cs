@@ -29,10 +29,11 @@ public class Witch : Entity
 
     private void Update()
     {
-
+        if (isDead) return;
         rb.velocity = new Vector2(speed * horizontalMovement, rb.velocity.y);
         Flip();
         anim.SetFloat("magnitude", Mathf.Abs(rb.velocity.x));
+        anim.SetBool("isGrounded", CheckGround());
     }
     public void Attack(InputAction.CallbackContext context)
     {

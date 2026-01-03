@@ -30,6 +30,7 @@ public class  Knight: Entity
 
     private void Update()
     {
+        if (isDead) return;
         SlowSlide();
         JumpSlide();
         if (!isWallJumping)

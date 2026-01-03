@@ -43,7 +43,7 @@ public class PickableItem : MonoBehaviour
                 UniqueObject unique = GetComponent<UniqueObject>();
                 if (unique != null)
                 {
-                    DatabaseManager.instance.AddDestroyedObject(unique.uniqueId);
+                    DatabaseManager.instance.MarkAsDestroyedTemporary(unique.uniqueId);
                 }
 
                 Debug.Log($"Предмет {itemId} подобран!");

@@ -20,7 +20,7 @@ public class RespawnManager : MonoBehaviour
         }
     }
 
-    public IEnumerator DieSequence(Entity entity, float waitTime = 1f)
+    public IEnumerator DieSequence(Entity entity, float waitTime = 2.5f)
     {
         yield return new WaitForSeconds(waitTime);
         if (ScreenFader.Instance != null)
@@ -39,6 +39,8 @@ public class RespawnManager : MonoBehaviour
 
     private IEnumerator RespawnFromSaveRoutine(Entity entity)
     {
+        DatabaseManager.instance.ClearPendingObjects();
+
         SaveData data = DatabaseManager.instance.LoadGame(GameSession.CurrentSlotIndex);
         if (data == null)
         {
