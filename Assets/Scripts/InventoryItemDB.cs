@@ -9,7 +9,7 @@ public class InventoryItemDB
     public int SaveSlotId { get; set; } 
 
     public int SlotIndex { get; set; }  
-    public string ItemId { get; set; }  
+    public string ItemId { get; set; } 
     public int Count { get; set; }     
 
     public InventoryItemDB() { }

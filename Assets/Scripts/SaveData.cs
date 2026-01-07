@@ -1,5 +1,6 @@
 using SQLite4Unity3d;
 using System;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class SaveData
 {
@@ -14,13 +15,15 @@ public class SaveData
     public float PositionY { get; set; }
     public float PositionZ { get; set; }
 
-    public int Health { get; set; }
+    public int KnightHealth { get; set; }
+    public int WitchHealth { get; set; }
+    public int CatHealth { get; set; }
     public int Damage { get; set; }
 
     public string SaveDate { get; set; }
 
     public SaveData() { }
-    public SaveData(int slotId, string sceneName, string playerType, UnityEngine.Vector3 pos, int hp, int dmg)
+    public SaveData(int slotId, string sceneName, string playerType, UnityEngine.Vector3 pos, int kHp, int wHp, int cHp, int dmg)
     {
         SlotId = slotId;
         SceneName = sceneName;
@@ -28,7 +31,9 @@ public class SaveData
         PositionX = pos.x;
         PositionY = pos.y;
         PositionZ = pos.z;
-        Health = hp;
+        KnightHealth = kHp;
+        WitchHealth = wHp;
+        CatHealth = cHp;
         Damage = dmg;
         SaveDate = DateTime.Now.ToString("g"); 
     }

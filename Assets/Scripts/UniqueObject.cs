@@ -3,15 +3,19 @@ using UnityEngine;
 public class UniqueObject : MonoBehaviour
 {
     public string uniqueId;
+    public bool autoDestroy = true;
     private void Start()
     {
         if (GameSession.IsNewGame)
         {
             return;
         }
-        if (DatabaseManager.instance.IsObjectDestroyed(uniqueId))
+        else if (DatabaseManager.instance.IsObjectDestroyed(uniqueId))
         {
-            Destroy(gameObject);
+            if (autoDestroy)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

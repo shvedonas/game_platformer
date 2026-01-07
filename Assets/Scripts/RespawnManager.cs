@@ -40,7 +40,7 @@ public class RespawnManager : MonoBehaviour
     private IEnumerator RespawnFromSaveRoutine(Entity entity)
     {
         DatabaseManager.instance.ClearPendingObjects();
-
+        Debug.LogWarning("Очищен списко.");
         SaveData data = DatabaseManager.instance.LoadGame(GameSession.CurrentSlotIndex);
         if (data == null)
         {

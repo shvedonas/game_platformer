@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 [System.Serializable]
 public class InventorySlot
@@ -29,7 +30,91 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] slots = new InventorySlot[15];
 
     private bool isOpen = false;
+    [Header("UI Selection")]
+    public TextMeshProUGUI inventoryTitle; 
 
+    private Action<string> onItemSelectedCallback;
+    private bool isSelectionMode = false;
+
+    public void OpenForSelection(Action<string> callback)
+    {
+        isOpen = true;
+        isSelectionMode = true;
+        onItemSelectedCallback = callback;
+
+        inventoryPanel.SetActive(true);
+        if (inventoryTitle) inventoryTitle.text = "Выберите предмет";
+        Time.timeScale = 0f;
+        UpdateUI();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (isOpen)
+            {
+                CloseInventory();
+            }
+            else
+            {
+                OpenRegular();
+            }
+        }
+    }
+
+    public void OpenRegular()
+    {
+        isOpen = true;
+        isSelectionMode = false;
+        onItemSelectedCallback = null;
+
+        inventoryPanel.SetActive(true);
+        if (inventoryTitle) inventoryTitle.text = "Инвентарь";
+        Time.timeScale = 0f;
+        UpdateUI();
+    }
+    public void RemoveItem(string itemId)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item != null && slots[i].item.id == itemId)
+            {
+                slots[i].count--;
+                if (slots[i].count <= 0)
+                {
+                    slots[i].Clear();
+                }
+
+                UpdateUI(); 
+                return; 
+            }
+        }
+    }
+    public void CloseInventory()
+    {
+        isOpen = false;
+        isSelectionMode = false;
+        onItemSelectedCallback = null;
+        inventoryPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void OnSlotSelected(int index)
+    {
+        if (index >= slots.Length || slots[index].item == null) return;
+
+        string selectedItemId = slots[index].item.id;
+
+        if (isSelectionMode && onItemSelectedCallback != null)
+        {
+            onItemSelectedCallback.Invoke(selectedItemId);
+        }
+        else
+        {
+            Debug.Log($"Использован предмет: {selectedItemId}");
+        }
+    }
     private void Awake()
     {
         Instance = this;
@@ -43,15 +128,6 @@ public class InventoryManager : MonoBehaviour
         UpdateUI();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            isOpen = !isOpen;
-            inventoryPanel.SetActive(isOpen);
-            if (isOpen) UpdateUI();
-        }
-    }
 
     public bool AddItem(string itemId, int amount = 1)
     {
@@ -156,6 +232,11 @@ public class InventoryManager : MonoBehaviour
             if (i >= slots.Length) break;
 
             Transform slotObj = slotsParent.GetChild(i);
+            InventorySlotUI slotUI = slotObj.GetComponent<InventorySlotUI>();
+            if (slotUI != null)
+            {
+                slotUI.Setup(i);
+            }
             Transform iconTr = slotObj.Find("Icon");
 
             TextMeshProUGUI countText = slotObj.Find("CountText").GetComponent<TextMeshProUGUI>();

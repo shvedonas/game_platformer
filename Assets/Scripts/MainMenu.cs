@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        GameSession.IsNewGame = true; 
+        GameSession.IsNewGame = true;
         SceneManager.LoadScene("LoadScene"); 
     }
 

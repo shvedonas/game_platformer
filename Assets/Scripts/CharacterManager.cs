@@ -1,16 +1,17 @@
 using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour
 {
+    public static SwitchCharacter Instance; 
+
     public static GameObject ActiveCharacter { get; private set; }
 
-    [Header("Персонажи")]
-    [SerializeField] private GameObject knight;
-    [SerializeField] private GameObject witch;
-    [SerializeField] private GameObject cat;
+    [Header("Персонажи (ссылки на объекты сцены)")]
+    [SerializeField] public GameObject knight;
+    [SerializeField] public GameObject witch;
+    [SerializeField] public GameObject cat;
 
     [Header("Настройки")]
     [SerializeField] private Transform startPoint;
@@ -18,32 +19,54 @@ public class SwitchCharacter : MonoBehaviour
 
     private GameObject currentCharacter;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private IEnumerator Start()
     {
         Time.timeScale = 1.0f;
-
         if (knight) knight.SetActive(false);
         if (witch) witch.SetActive(false);
         if (cat) cat.SetActive(false);
 
+        yield return null;
+
         if (DatabaseManager.instance == null)
         {
-            Debug.LogWarning("База данных не найдена");
+            Debug.LogWarning("DatabaseManager не найден! Запускаем рыцаря по умолчанию.");
             ActivateCharacter(knight);
-            yield break; 
+            yield break;
         }
 
         if (GameSession.IsNewGame)
         {
-            DatabaseManager.instance.ClearSaveSlot(GameSession.CurrentSlotIndex);
-            GameObject defaultChar = knight;
-            if (startPoint != null) defaultChar.transform.position = startPoint.position;
-            ActivateCharacter(defaultChar);
-            Entity entity = defaultChar.GetComponent<Entity>();
-            if (entity != null)
+            Debug.Log("Новая игра: Сброс позиций и здоровья.");
+
+            if (startPoint != null)
             {
-                entity.SaveEntityData();
+                knight.transform.position = startPoint.position;
+                witch.transform.position = startPoint.position;
+                cat.transform.position = startPoint.position;
             }
+
+            ResetHealth(knight);
+            ResetHealth(witch);
+            ResetHealth(cat);
+
+            ActivateCharacter(knight);
+            DatabaseManager.instance.ClearSaveSlot(GameSession.CurrentSlotIndex);
+            Entity entity = knight.GetComponent<Entity>();
+            if (entity != null) entity.SaveEntityData();
+
             GameSession.IsNewGame = false;
         }
         else
@@ -52,23 +75,20 @@ public class SwitchCharacter : MonoBehaviour
 
             if (data != null)
             {
+                Debug.Log($"Загрузка слота {GameSession.CurrentSlotIndex}...");
+                ApplyHealth(knight, data.KnightHealth);
+                ApplyHealth(witch, data.WitchHealth);
+                ApplyHealth(cat, data.CatHealth);
+
                 GameObject targetChar = GetCharacterObjectByType(data.PlayerType);
-                if (targetChar == null) targetChar = knight; 
-
+                if (targetChar == null) targetChar = knight;
+                targetChar.transform.position = new Vector3(data.PositionX, data.PositionY, data.PositionZ);
                 ActivateCharacter(targetChar);
-
-                Entity entity = targetChar.GetComponent<Entity>();
-                if (entity != null)
-                {
-                    entity.LoadEntityData(data);
-                }
             }
             else
             {
-                Debug.LogWarning("Сейв не найден.");
+                Debug.LogWarning("Сейв не найден (хотя флаг IsNewGame false). Загружаем дефолт.");
                 ActivateCharacter(knight);
-                if (startPoint != null) knight.transform.position = startPoint.position;
-                knight.GetComponent<Entity>().SaveEntityData();
             }
         }
     }
@@ -78,6 +98,42 @@ public class SwitchCharacter : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha1)) SwitchC(knight);
         else if (Input.GetKeyUp(KeyCode.Alpha2)) SwitchC(witch);
         else if (Input.GetKeyUp(KeyCode.Alpha3)) SwitchC(cat);
+    }
+
+    private void SwitchC(GameObject targetCharacter)
+    {
+        if (targetCharacter == null || targetCharacter == currentCharacter) return;
+
+        Entity currentEntity = currentCharacter.GetComponent<Entity>();
+        if (currentEntity != null && currentEntity.isDead) return;
+        if (currentEntity != null && currentEntity.isInputLocked)
+            return;
+        Vector3 lastPosition = currentCharacter.transform.position;
+        BoxCollider2D newCollider = targetCharacter.GetComponent<BoxCollider2D>();
+
+        if (newCollider != null)
+        {
+            float targetHeight = newCollider.size.y * Mathf.Abs(targetCharacter.transform.localScale.y);
+
+            float checkWidth = 0.1f; 
+            float groundBuffer = 0.1f; 
+
+            Vector2 checkSize = new Vector2(checkWidth, targetHeight - groundBuffer);
+            Vector2 checkCenter = (Vector2)lastPosition + Vector2.up * (groundBuffer + checkSize.y * 0.5f);
+
+            LayerMask groundMask = LayerMask.GetMask("Ground");
+            Collider2D hit = Physics2D.OverlapBox(checkCenter, checkSize, 0f, groundMask);
+
+            if (hit != null)
+            {
+                Debug.Log($"Нельзя переключиться на {targetCharacter.name} — мало места (потолок)!");
+                return;
+            }
+        }
+
+        targetCharacter.transform.position = lastPosition;
+
+        ActivateCharacter(targetCharacter);
     }
 
     public void ActivateCharacter(GameObject character)
@@ -94,13 +150,11 @@ public class SwitchCharacter : MonoBehaviour
         if (virtualCamera != null)
             virtualCamera.Follow = currentCharacter.transform;
 
-  
         if (CharacterUIManager.Instance != null)
         {
             CharacterUIManager.Instance.UpdateFrames(currentCharacter);
         }
 
- 
         Entity entity = currentCharacter.GetComponent<Entity>();
         if (entity != null && CharacterUIManager.Instance != null)
         {
@@ -108,47 +162,33 @@ public class SwitchCharacter : MonoBehaviour
         }
     }
 
-    private void SwitchC(GameObject targetCharacter)
-    {
-        if (targetCharacter == null || targetCharacter == currentCharacter) return;
-        Entity currentEntity = currentCharacter.GetComponent<Entity>();
-        if (currentEntity != null && currentEntity.isDead)
-        {
-            return;
-        }
-        Vector3 lastPosition = currentCharacter.transform.position;
-
-        BoxCollider2D newCollider = targetCharacter.GetComponent<BoxCollider2D>();
-        if (newCollider != null)
-        {
-            Vector2 checkSize = newCollider.size * Mathf.Max(targetCharacter.transform.localScale.x, targetCharacter.transform.localScale.y);
-            Vector2 checkCenter = (Vector2)lastPosition + newCollider.offset + (Vector2.up * 0.1f);
-
-            LayerMask groundMask = LayerMask.GetMask("Ground");
-            Collider2D hit = Physics2D.OverlapBox(checkCenter, checkSize, 0f, groundMask);
-
-            if (hit != null)
-            {
-                Debug.Log($"Нельзя переключиться на {targetCharacter.name} — мало места!");
-                return;
-            }
-        }
-
-        targetCharacter.transform.position = lastPosition;
-
-        ActivateCharacter(targetCharacter);
-
-        Debug.Log($"Переключились на: {targetCharacter.name}");
-    }
-
     public GameObject GetCharacterObjectByType(string typeName)
     {
-        string type = typeName.ToLower();
+        if (string.IsNullOrEmpty(typeName)) return null;
 
+        string type = typeName.ToLower();
         if (type.Contains("knight")) return knight;
         if (type.Contains("witch")) return witch;
         if (type.Contains("cat")) return cat;
 
         return null;
+    }
+
+    private void ResetHealth(GameObject charObj)
+    {
+        if (charObj != null)
+        {
+            Entity e = charObj.GetComponent<Entity>();
+            if (e != null) e.health = e.maxHealth;
+        }
+    }
+
+    private void ApplyHealth(GameObject charObj, int hp)
+    {
+        if (charObj != null)
+        {
+            Entity e = charObj.GetComponent<Entity>();
+            if (e != null) e.health = hp;
+        }
     }
 }

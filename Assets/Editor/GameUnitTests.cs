@@ -228,15 +228,18 @@ public class GameUnitTests
     [Test]
     public void SaveData_01_Positive_Create()
     {
-        SaveData d = new SaveData(1, "Scene", "Witch", Vector3.zero, 100, 10);
+        // ѕередаем 3 значени€ здоровь€ (100, 100, 100) и 1 значение урона (10)
+        SaveData d = new SaveData(1, "Scene", "Witch", Vector3.zero, 100, 100, 100, 10);
+
         Assert.AreEqual(1, d.SlotId);
         Assert.AreEqual("Witch", d.PlayerType);
+        Assert.AreEqual(100, d.WitchHealth); // ћожно проверить конкретное здоровье
     }
 
     [Test]
     public void SaveData_02_Positive_DateGenerated()
     {
-        SaveData d = new SaveData(1, "S", "W", Vector3.zero, 1, 1);
+        SaveData d = new SaveData(1, "S", "W", Vector3.zero, 1, 1, 1, 1);
         Assert.IsNotNull(d.SaveDate);
         Assert.IsNotEmpty(d.SaveDate);
     }
@@ -244,28 +247,29 @@ public class GameUnitTests
     [Test]
     public void SaveData_03_Boundary_NegativeHP()
     {
-        SaveData d = new SaveData(1, "S", "C", Vector3.zero, -100, 5);
-        Assert.AreEqual(-100, d.Health);
+        // ѕровер€ем отрицательное здоровье дл€ одного из персонажей
+        SaveData d = new SaveData(1, "S", "C", Vector3.zero, -100, 50, 50, 5);
+        Assert.AreEqual(-100, d.KnightHealth);
     }
 
     [Test]
     public void SaveData_04_Boundary_LargeCoord()
     {
-        SaveData d = new SaveData(1, "S", "C", new Vector3(9999, 9999, 0), 10, 5);
+        SaveData d = new SaveData(1, "S", "C", new Vector3(9999, 9999, 0), 10, 10, 10, 5);
         Assert.AreEqual(9999, d.PositionX);
     }
 
     [Test]
     public void SaveData_05_Negative_NullScene()
     {
-        SaveData d = new SaveData(1, null, "C", Vector3.zero, 10, 5);
+        SaveData d = new SaveData(1, null, "C", Vector3.zero, 10, 10, 10, 5);
         Assert.IsNull(d.SceneName);
     }
 
     [Test]
     public void SaveData_06_Boundary_ZeroID()
     {
-        SaveData d = new SaveData(0, "S", "C", Vector3.zero, 10, 5);
+        SaveData d = new SaveData(0, "S", "C", Vector3.zero, 10, 10, 10, 5);
         Assert.AreEqual(0, d.SlotId);
     }
 

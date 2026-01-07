@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro; 
+using TMPro;
 
 public class SaveSlotUI : MonoBehaviour
 {
-    public int slotNumber = 1; 
-    public TextMeshProUGUI infoText; 
+    public int slotNumber = 1;
+    public TextMeshProUGUI infoText;
     public Button button;
 
     private void Start()
@@ -20,7 +20,17 @@ public class SaveSlotUI : MonoBehaviour
 
         if (data != null)
         {
-            infoText.text = $"{data.PlayerType} | HP: {data.Health}\n{data.SaveDate}";
+            int displayHealth = 0;
+            if (data.PlayerType.Contains("Knight"))
+                displayHealth = data.KnightHealth;
+            else if (data.PlayerType.Contains("Witch"))
+                displayHealth = data.WitchHealth;
+            else if (data.PlayerType.Contains("Cat"))
+                displayHealth = data.CatHealth;
+            else
+                displayHealth = data.KnightHealth;
+
+            infoText.text = $"{data.PlayerType} | HP: {displayHealth}\n{data.SaveDate}";
         }
         else
         {

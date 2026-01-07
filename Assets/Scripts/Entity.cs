@@ -35,7 +35,7 @@ public class Entity : MonoBehaviour
     public Vector2 wallJumpPower = new Vector2(5f,12f);
 
     [Header("Attack")]
-    [SerializeField] public int damage = 3;
+    [SerializeField] public int damage = 1;
 
     [Header("Combat")]
     public bool isAttacking;
@@ -51,15 +51,38 @@ public class Entity : MonoBehaviour
     public int health;
     public int count = 0;
     public GameObject doubleJumpCharacter;
-    private bool isHurting;
+    public bool isHurting;
+    public bool isInputLocked = false;
     public void Move(InputAction.CallbackContext context)
     {
-        if(isDead == false)
+        if (isInputLocked)
+        {
+            horizontalMovement = 0;
+            return;
+        }
+        if (isDead == false)
         horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+    public void LockInput(bool locked)
+    {
+        isInputLocked = locked;
+        if (locked)
+        {
+            horizontalMovement = 0;
+            rb.velocity = new Vector2(0, rb.velocity.y); 
+            anim.SetFloat("magnitude", 0);
+            isAttacking = false;
+            anim.ResetTrigger("attack");
+        }
     }
     public void Jump(InputAction.CallbackContext context)
     {
-          if (CheckGround() || count == 0 && SwitchCharacter.ActiveCharacter == doubleJumpCharacter) {
+        if (isInputLocked)
+        {
+            horizontalMovement = 0;
+            return;
+        }
+        if (CheckGround() || count == 0 && SwitchCharacter.ActiveCharacter == doubleJumpCharacter) {
             if (context.performed && !isDead && count<=2)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -234,25 +257,30 @@ public class Entity : MonoBehaviour
         string myType = this.GetType().Name;
         string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
+        int kHp = SwitchCharacter.Instance.knight.GetComponent<Entity>().health;
+        int wHp = SwitchCharacter.Instance.witch.GetComponent<Entity>().health;
+        int cHp = SwitchCharacter.Instance.cat.GetComponent<Entity>().health;
+
         SaveData data = new SaveData(
             GameSession.CurrentSlotIndex,
             currentScene,
             myType,
             positionToSave,
-            health, 
+            kHp,
+            wHp,
+            cHp,
             damage
         );
 
         DatabaseManager.instance.SaveGame(data);
-        Debug.Log("Игра сохранена на чекпоинте!");
+        Debug.Log("Игра сохранена (HP всех героев записано)!");
     }
 
     public void LoadEntityData(SaveData data)
     {
         transform.position = new Vector3(data.PositionX, data.PositionY, data.PositionZ);
-        health = data.Health;
-        damage = data.Damage;
-        Debug.Log("Персонаж загружен из базы!");
+
+        Debug.Log("Позиция персонажа загружена!");
     }
     public virtual void Damage()
     {

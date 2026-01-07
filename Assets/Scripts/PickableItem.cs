@@ -6,11 +6,13 @@ public class PickableItem : MonoBehaviour
     public string itemId; 
 
     private bool isPlayerInRange = false;
+    [SerializeField] private GameObject e;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            e.SetActive(true);
             isPlayerInRange = true;
             Debug.Log($"Можно подобрать: {itemId} (Нажми E)");
         }
@@ -20,6 +22,7 @@ public class PickableItem : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            e.SetActive(false);
             isPlayerInRange = false;
         }
     }
@@ -43,6 +46,7 @@ public class PickableItem : MonoBehaviour
                 UniqueObject unique = GetComponent<UniqueObject>();
                 if (unique != null)
                 {
+                    
                     DatabaseManager.instance.MarkAsDestroyedTemporary(unique.uniqueId);
                 }
 

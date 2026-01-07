@@ -30,7 +30,7 @@ public class Cat : Entity
 
     private void Update()
     {
-
+        if (isHurting) return;
         rb.velocity = new Vector2(speed * horizontalMovement, rb.velocity.y);
         Flip();
         anim.SetFloat("magnitude", Mathf.Abs(rb.velocity.x));
@@ -38,7 +38,7 @@ public class Cat : Entity
     }
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking)
+        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking && !EventSystem.current.IsPointerOverGameObject() && !isInputLocked)
         {
             isAttacking = true;
             lastAttackTime = Time.time;

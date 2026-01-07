@@ -30,6 +30,7 @@ public class  Knight: Entity
 
     private void Update()
     {
+        if (isHurting) return; 
         if (isDead) return;
         SlowSlide();
         JumpSlide();
@@ -45,7 +46,7 @@ public class  Knight: Entity
     }
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking && !isDead)
+        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking && !isDead && !EventSystem.current.IsPointerOverGameObject() && !isInputLocked)
         {
             isAttacking = true;
             lastAttackTime = Time.time;

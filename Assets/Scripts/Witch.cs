@@ -29,6 +29,7 @@ public class Witch : Entity
 
     private void Update()
     {
+        if (isHurting) return;
         if (isDead) return;
         rb.velocity = new Vector2(speed * horizontalMovement, rb.velocity.y);
         Flip();
@@ -37,7 +38,7 @@ public class Witch : Entity
     }
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking)
+        if (context.performed && Time.time > lastAttackTime + attackCooldown && !isAttacking&& !EventSystem.current.IsPointerOverGameObject() && !isInputLocked)
         {
             isAttacking = true;
             lastAttackTime = Time.time;

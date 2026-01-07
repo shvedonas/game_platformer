@@ -3,64 +3,140 @@
   "WorkspaceRootPath": "C:\\play\\ChasingShadow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|c:\\play\\chasingshadow\\assets\\scripts\\chaserenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chaserenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|c:\\play\\chasingshadow\\assets\\scripts\\movingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|c:\\play\\chasingshadow\\assets\\scripts\\enotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\notificationui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\notificationui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\movingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\characteruimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characteruimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\doorinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doorinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|C:\\play\\ChasingShadow\\assets\\astarpathfindingproject\\core\\ai\\seeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|solutionrelative:assets\\astarpathfindingproject\\core\\ai\\seeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50F935FF-B8C5-F70C-F0E9-5A766B41382E}|Assembly-CSharp-Editor.csproj|C:\\play\\ChasingShadow\\assets\\editor\\gameunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50F935FF-B8C5-F70C-F0E9-5A766B41382E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\gameunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF910E02-72F4-70E4-5C6C-7386D5A03ABF}|AstarPathfindingProjectEditor.csproj|C:\\play\\ChasingShadow\\assets\\astarpathfindingproject\\editor\\astarupdatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF910E02-72F4-70E4-5C6C-7386D5A03ABF}|AstarPathfindingProjectEditor.csproj|solutionrelative:assets\\astarpathfindingproject\\editor\\astarupdatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\saveslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\saveslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\respawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\respawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\fallingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\uniqueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uniqueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pickableitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\die.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|C:\\play\\ChasingShadow\\assets\\astarpathfindingproject\\core\\astarpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|solutionrelative:assets\\astarpathfindingproject\\core\\astarpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\chaserenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chaserenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\checkpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\checkpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\respawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\respawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\fairyhinttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fairyhinttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\inventoryitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventoryitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\movingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\fairyhint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fairyhint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\dialoguebubble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguebubble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\characteruimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characteruimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\play\\ChasingShadow\\Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50F935FF-B8C5-F70C-F0E9-5A766B41382E}|Assembly-CSharp-Editor.csproj|C:\\play\\ChasingShadow\\assets\\editor\\gameunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50F935FF-B8C5-F70C-F0E9-5A766B41382E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\gameunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|C:\\play\\ChasingShadow\\assets\\astarpathfindingproject\\core\\ai\\seeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C70CE822-6E14-17B8-1D7C-1154F542DD5F}|AstarPathfindingProject.csproj|solutionrelative:assets\\astarpathfindingproject\\core\\ai\\seeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\fallingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fallingplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\movingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\soundsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,64 +151,12 @@
       "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screenfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\saveslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\saveslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\settingsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\pause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pause.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\inventoryitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventoryitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\witch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\ai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D2DF8F9-E051-AFB7-9A57-68D9E977C36B}|Assembly-CSharp.csproj|C:\\play\\ChasingShadow\\assets\\scripts\\sqlite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -145,6 +169,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\play\\ChasingShadow\\Assets\\Scenes\\Tests\\GameUnitTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scenes\\Tests\\GameUnitTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\play\\ChasingShadow\\Assets\\HideZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\HideZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\play\\ChasingShadow\\Assets\\loop_patrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\loop_patrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,75 +186,243 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Entity.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Entity.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Entity.cs",
               "RelativeToolTip": "Assets\\Scripts\\Entity.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAvwEoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T13:30:33.648Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "AI.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\AI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AI.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\AI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AI.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T21:43:37.301Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ENotification.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ENotification.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ENotification.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ENotification.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ENotification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T18:08:50.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CharacterManager.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterManager.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterManager.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwEgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T16:51:06.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AstarPath.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Core\\AstarPath.cs",
+              "RelativeDocumentMoniker": "Assets\\AstarPathfindingProject\\Core\\AstarPath.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Core\\AstarPath.cs",
+              "RelativeToolTip": "Assets\\AstarPathfindingProject\\Core\\AstarPath.cs",
+              "ViewState": "AgIAAD8DAAAAAAAAAABRwEIDAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T16:28:33.845Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PickableItem.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\PickableItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PickableItem.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\PickableItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PickableItem.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T20:36:23.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FairyHintTrigger.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\FairyHintTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FairyHintTrigger.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\FairyHintTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FairyHintTrigger.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwBYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T14:25:55.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DialogueBubble.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DialogueBubble.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueBubble.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DialogueBubble.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DialogueBubble.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T14:07:11.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FairyHint.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\FairyHint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FairyHint.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\FairyHint.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FairyHint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T14:06:12.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoorInteraction.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DoorInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorInteraction.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DoorInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorInteraction.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAjwDAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:14:43.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationUI.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\NotificationUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NotificationUI.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\NotificationUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NotificationUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T22:26:36.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryManager.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InventoryManager.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAiwAkBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T19:29:03.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HideZone.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\HideZone.cs",
+              "RelativeDocumentMoniker": "Assets\\HideZone.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\HideZone.cs",
+              "RelativeToolTip": "Assets\\HideZone.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T19:06:42.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "loop_patrol.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\loop_patrol.cs",
+              "RelativeDocumentMoniker": "Assets\\loop_patrol.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\loop_patrol.cs",
+              "RelativeToolTip": "Assets\\loop_patrol.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T23:07:28.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Unity.MemoryProfiler.Editor.asmdef",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef",
+              "ToolTip": "C:\\play\\ChasingShadow\\Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.memoryprofiler@1.1.9\\Editor\\Unity.MemoryProfiler.Editor.asmdef",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001874|",
+              "WhenOpened": "2026-01-03T08:58:00.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Witch.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Witch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Witch.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Witch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Witch.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAswCgAAACgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T20:11:40.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Knight.cs",
+              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Knight.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Knight.cs",
+              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Knight.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Knight.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwDQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T13:34:22.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ChaserEnemy.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ChaserEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ChaserEnemy.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ChaserEnemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\ChaserEnemy.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAiwJwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-02T11:42:54.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-02T11:42:54.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 29,
               "Title": "Seeker.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Core\\AI\\Seeker.cs",
               "RelativeDocumentMoniker": "Assets\\AstarPathfindingProject\\Core\\AI\\Seeker.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Core\\AI\\Seeker.cs",
               "RelativeToolTip": "Assets\\AstarPathfindingProject\\Core\\AI\\Seeker.cs",
-              "ViewState": "AgIAAOYBAAAAAAAAAAAcwPsBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T11:12:36.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "RespawnManager.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\RespawnManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RespawnManager.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\RespawnManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\RespawnManager.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-18T14:28:34.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 28,
               "Title": "GameUnitTests.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Editor\\GameUnitTests.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\GameUnitTests.cs",
@@ -234,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "GameUnitTests.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scenes\\Tests\\GameUnitTests.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Tests\\GameUnitTests.cs",
@@ -245,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 36,
               "Title": "ScreenFader.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ScreenFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenFader.cs",
@@ -257,19 +457,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 26,
               "Title": "CharacterUIManager.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterUIManager.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterUIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\CharacterUIManager.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAmwEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAA2wEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-18T12:37:24.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 34,
               "Title": "SoundSettings.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SoundSettings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundSettings.cs",
@@ -281,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 37,
               "Title": "Pause.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Pause.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pause.cs",
@@ -293,43 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CharacterManager.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterManager.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\CharacterManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T15:26:48.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Knight.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Knight.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Knight.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Knight.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Knight.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAiwFUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:34:22.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AstarUpdateChecker.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Editor\\AstarUpdateChecker.cs",
-              "RelativeDocumentMoniker": "Assets\\AstarPathfindingProject\\Editor\\AstarUpdateChecker.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Editor\\AstarUpdateChecker.cs",
-              "RelativeToolTip": "Assets\\AstarPathfindingProject\\Editor\\AstarUpdateChecker.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAewCQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T23:24:31.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "AstarPathEditor.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\AstarPathfindingProject\\Editor\\AstarPathEditor.cs",
               "RelativeDocumentMoniker": "Assets\\AstarPathfindingProject\\Editor\\AstarPathEditor.cs",
@@ -341,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 35,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
@@ -353,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 33,
               "Title": "MovingEnemy.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\MovingEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovingEnemy.cs",
@@ -361,36 +525,23 @@
               "RelativeToolTip": "Assets\\Scripts\\MovingEnemy.cs",
               "ViewState": "AgIAAH0AAAAAAAAAAAAIwJ8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T22:05:38.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T22:05:38.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 8,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAUwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAIA9wBIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T22:23:21.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Witch.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Witch.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Witch.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Witch.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Witch.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAiwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T20:11:40.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "SettingsMenu.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SettingsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SettingsMenu.cs",
@@ -402,19 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryManager.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InventoryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T19:29:03.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "ItemData.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\ItemData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemData.cs",
@@ -426,43 +565,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PickableItem.cs",
-              "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\PickableItem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PickableItem.cs",
-              "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\PickableItem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PickableItem.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwDUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T20:36:23.607Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 30,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T15:42:33.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "UniqueObject.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\UniqueObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UniqueObject.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\UniqueObject.cs",
               "RelativeToolTip": "Assets\\Scripts\\UniqueObject.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T21:15:06.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "SQLite.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SQLite.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SQLite.cs",
@@ -474,68 +601,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "SaveSlotUI.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SaveSlotUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SaveSlotUI.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SaveSlotUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\SaveSlotUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAMwC4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T16:20:50.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 21,
               "Title": "SaveData.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SaveData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SaveData.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\SaveData.cs",
               "RelativeToolTip": "Assets\\Scripts\\SaveData.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T16:15:45.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "MovingPlatforms.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\MovingPlatforms.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovingPlatforms.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\MovingPlatforms.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovingPlatforms.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA0wBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T11:28:00.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T11:28:00.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 18,
               "Title": "InventoryItemDB.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryItemDB.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InventoryItemDB.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\InventoryItemDB.cs",
               "RelativeToolTip": "Assets\\Scripts\\InventoryItemDB.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAswBcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T19:26:55.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 9,
               "Title": "GameSession.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\GameSession.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameSession.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\GameSession.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T16:19:39.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 31,
               "Title": "FallingPlatforms.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\FallingPlatforms.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FallingPlatforms.cs",
@@ -547,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "die.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\die.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\die.cs",
@@ -559,39 +685,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 5,
               "Title": "DatabaseManager.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DatabaseManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DatabaseManager.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\DatabaseManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\DatabaseManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowI0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T16:17:25.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Checkpoints.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Checkpoints.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Checkpoints.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Checkpoints.cs",
               "RelativeToolTip": "Assets\\Scripts\\Checkpoints.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA6wD4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwD0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T16:28:35.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 3,
               "Title": "Cat.cs",
               "DocumentMoniker": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Cat.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cat.cs",
               "ToolTip": "C:\\play\\ChasingShadow\\Assets\\Scripts\\Cat.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cat.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAiwEwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCgAAACgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T20:11:33.702Z"
+              "WhenOpened": "2025-10-28T20:11:33.702Z",
+              "EditorCaption": ""
             }
           ]
         }
