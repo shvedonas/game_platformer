@@ -6,9 +6,8 @@ public class Spikes : MonoBehaviour
     public float bounceForce = 15f;    
     public float knockbackForce = 10f; 
     public int damage = 1;
-
     private Entity dummyAttacker;
-
+    private bool knight;
     private void Start()
     {
         dummyAttacker = gameObject.AddComponent<Entity>();
@@ -20,22 +19,34 @@ public class Spikes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HandlePlayerBounce(collision);
-
-            if (damage > 0)
+            Entity playerEntity = collision.gameObject.GetComponent<Entity>();
+            if (playerEntity != null && playerEntity.health > 1)
             {
-                Entity playerEntity = collision.gameObject.GetComponent<Entity>();
-                if (playerEntity != null && !playerEntity.isDead)
+                if(playerEntity.gameObject.name == "Knight")
                 {
-                    dummyAttacker.damage = damage;
-                    playerEntity.TakeDamage(dummyAttacker);
+                    knight = true;
                 }
+                else
+                {
+                    knight = false;
+                }
+                    HandlePlayerBounce(collision);
             }
+                if (damage > 0)
+                {
+                    if (playerEntity != null && !playerEntity.isDead)
+                    {
+                        dummyAttacker.damage = damage;
+                        playerEntity.TakeDamage(dummyAttacker);
+                    }
+                }         
         }
     }
 
     private void HandlePlayerBounce(Collision2D collision)
     {
+        if (knight) bounceForce = 800;
+        else bounceForce = 700;
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
         if (rb)
         {

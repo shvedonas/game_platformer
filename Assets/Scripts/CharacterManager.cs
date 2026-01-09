@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour
 {
-    public static SwitchCharacter Instance; 
-
+    public static SwitchCharacter Instance;
+    public bool ForceSpawnAtStart = false;
     public static GameObject ActiveCharacter { get; private set; }
 
     [Header("Персонажи (ссылки на объекты сцены)")]
@@ -16,9 +16,10 @@ public class SwitchCharacter : MonoBehaviour
     [Header("Настройки")]
     [SerializeField] private Transform startPoint;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-
+    public bool catActive = false;
+    public bool witchActive = false;
     private GameObject currentCharacter;
-
+    private FairyHintTrigger trigger;
     private void Awake()
     {
         if (Instance == null)
@@ -75,22 +76,30 @@ public class SwitchCharacter : MonoBehaviour
 
             if (data != null)
             {
-                Debug.Log($"Загрузка слота {GameSession.CurrentSlotIndex}...");
                 ApplyHealth(knight, data.KnightHealth);
                 ApplyHealth(witch, data.WitchHealth);
                 ApplyHealth(cat, data.CatHealth);
 
                 GameObject targetChar = GetCharacterObjectByType(data.PlayerType);
                 if (targetChar == null) targetChar = knight;
-                targetChar.transform.position = new Vector3(data.PositionX, data.PositionY, data.PositionZ);
+
+                if (ForceSpawnAtStart && startPoint != null)
+                {
+                    targetChar.transform.position = startPoint.position;
+                }
+                else
+                {
+                    targetChar.transform.position = new Vector3(
+                       data.PositionX,
+                       data.PositionY,
+                       0f
+                   );
+                }
+
                 ActivateCharacter(targetChar);
             }
-            else
-            {
-                Debug.LogWarning("Сейв не найден (хотя флаг IsNewGame false). Загружаем дефолт.");
-                ActivateCharacter(knight);
-            }
         }
+
     }
 
     private void Update()
@@ -103,7 +112,8 @@ public class SwitchCharacter : MonoBehaviour
     private void SwitchC(GameObject targetCharacter)
     {
         if (targetCharacter == null || targetCharacter == currentCharacter) return;
-
+        if (Input.GetKeyUp(KeyCode.Alpha3) && !catActive) return;
+        if(Input.GetKeyUp(KeyCode.Alpha2) && !witchActive) return;
         Entity currentEntity = currentCharacter.GetComponent<Entity>();
         if (currentEntity != null && currentEntity.isDead) return;
         if (currentEntity != null && currentEntity.isInputLocked)

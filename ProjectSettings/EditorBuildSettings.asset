@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SettingScene.unity
     guid: bdbd6f34876682f42afd28add6c446c3
+  - enabled: 1
+    path: Assets/Scenes/Examination.unity
+    guid: 755ebe916ea99c840a1b58523eae09eb
   m_configObjects: {}

@@ -7,8 +7,13 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private string requiredItemId = "Key_Start";
     [SerializeField] private GameObject interactButtonUI;
     [SerializeField] private Animator doorAnimator;
-    [SerializeField] private Collider2D physicsCollider; 
+    [SerializeField] private Collider2D physicsCollider;
     [SerializeField] private SpriteRenderer sprite;
+
+    [Header("Фея")]
+    [SerializeField] private FairyController fairyController; 
+    private bool fairyEventWasTriggered = false;
+
     private bool isPlayerInRange;
     private bool isDoorOpen = false;
     private UniqueObject uniqueObj;
@@ -44,40 +49,42 @@ public class DoorInteraction : MonoBehaviour
         }
         else
         {
-            NotificationUI.Instance.ShowNotification("Не к чему применить!", 2f);
+            if (fairyController != null && !fairyEventWasTriggered)
+            {
+                fairyEventWasTriggered = true; 
+                InventoryManager.Instance.CloseInventory();
+                fairyController.StartFairySequence();
+            }
+            else
+            {
+                NotificationUI.Instance.ShowNotification("Не к чему применить!", 2f);
+            }
         }
     }
 
     private IEnumerator OpenDoorSequence()
     {
         InventoryManager.Instance.CloseInventory();
-
         Entity player = SwitchCharacter.ActiveCharacter.GetComponent<Entity>();
         if (player != null) player.LockInput(true);
-
         DatabaseManager.instance.MarkAsDestroyedTemporary(uniqueObj.uniqueId);
-
         isDoorOpen = true;
         if (interactButtonUI) interactButtonUI.SetActive(false);
-
         if (doorAnimator != null)
         {
             doorAnimator.SetTrigger("Open");
             yield return new WaitForSeconds(1f);
         }
-
         if (player != null) player.LockInput(false);
         if (physicsCollider != null) physicsCollider.enabled = false;
     }
+
     private void SetOpenStateImmediate()
     {
         isDoorOpen = true;
         if (physicsCollider != null) physicsCollider.enabled = false;
-        if(sprite!=null) sprite.enabled = false;
-        if (doorAnimator != null)
-        {
-            doorAnimator.Play("Open", 0, 1.0f);
-        }
+        if (sprite != null) sprite.enabled = false;
+        if (doorAnimator != null) doorAnimator.Play("Open", 0, 1.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

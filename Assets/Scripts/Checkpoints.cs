@@ -8,13 +8,14 @@ public class Checkpoint : Entity
 
     [Header("Визуал")]
     public SpriteRenderer spriteRenderer;
-    public Sprite activeSprite; 
+    public Animator animator;
     public Sprite inactiveSprite; 
 
     private bool isActivated = false;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -43,9 +44,9 @@ public class Checkpoint : Entity
         {
             isActivated = true;
             savePos = transform.position;
-            if (spriteRenderer != null && activeSprite != null)
+            if (spriteRenderer != null)
             {
-                spriteRenderer.sprite = activeSprite;
+                anim.SetTrigger("Check");
             }
             Debug.Log("Чекпоинт активирован!");
         }

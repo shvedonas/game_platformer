@@ -191,6 +191,8 @@ public class Entity : MonoBehaviour
         isDead = true;
         isWallSliding = false;
         anim.SetBool("isWallSliding", false);
+        anim.SetBool("isGrounded", true);
+        anim.ResetTrigger("jump");
         anim.SetTrigger("Dead");
         gameObject.layer = LayerMask.NameToLayer("Dead");
 
@@ -243,19 +245,21 @@ public class Entity : MonoBehaviour
     private IEnumerator HurtRoutine()
     {
         isHurting = true;
-
+        anim.SetBool("isGrounded", true);
+        anim.ResetTrigger("jump");
         anim.SetTrigger("hurt");
         yield return new WaitForSeconds(0.4f);
 
         isHurting = false;
 
     }
-    public void SaveEntityData(Vector3? overridePosition = null)
+    public void SaveEntityData(Vector3? overridePosition = null, string overrideSceneName = null)
     {
         Vector3 positionToSave = overridePosition ?? transform.position;
 
-        string myType = this.GetType().Name;
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string sceneToSave = !string.IsNullOrEmpty(overrideSceneName)
+            ? overrideSceneName
+            : UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
         int kHp = SwitchCharacter.Instance.knight.GetComponent<Entity>().health;
         int wHp = SwitchCharacter.Instance.witch.GetComponent<Entity>().health;
@@ -263,8 +267,8 @@ public class Entity : MonoBehaviour
 
         SaveData data = new SaveData(
             GameSession.CurrentSlotIndex,
-            currentScene,
-            myType,
+            sceneToSave, 
+            this.GetType().Name,
             positionToSave,
             kHp,
             wHp,
@@ -273,7 +277,7 @@ public class Entity : MonoBehaviour
         );
 
         DatabaseManager.instance.SaveGame(data);
-        Debug.Log("Игра сохранена (HP всех героев записано)!");
+        Debug.Log($"Игра сохранена! Сцена: {sceneToSave}");
     }
 
     public void LoadEntityData(SaveData data)

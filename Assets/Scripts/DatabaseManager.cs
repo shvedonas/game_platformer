@@ -20,8 +20,7 @@ public class DatabaseManager : MonoBehaviour
 
     private HashSet<string> _pendingDestroyedObjects = new HashSet<string>();
 
-    public static HashSet<string> ShownHints = new HashSet<string>();
-
+    public RiddleMaster r;
     private void Awake()
     {
         if (instance == null)
@@ -47,6 +46,7 @@ public class DatabaseManager : MonoBehaviour
 
     public SaveData LoadGame(int slotId)
     {
+        ClearPendingObjects();
         return _connection.Table<SaveData>().Where(x => x.SlotId == slotId).FirstOrDefault();
     }
 
@@ -89,8 +89,8 @@ public class DatabaseManager : MonoBehaviour
     {
         try
         {
+            r.open = false;
             ClearPendingObjects();
-            ClearHints();
             _connection.Execute("DELETE FROM SaveData WHERE SlotId = ?", slotId);
             _connection.Execute("DELETE FROM InventoryItemDB WHERE SaveSlotId = ?", slotId);
             _connection.Execute("DELETE FROM DestroyedObjectDB WHERE SaveSlotId = ?", slotId);
@@ -132,10 +132,6 @@ public class DatabaseManager : MonoBehaviour
         _pendingDestroyedObjects.Clear();
     }
 
-    public void ClearHints()
-    {
-        ShownHints.Clear();
-    }
 
     public bool IsObjectDestroyed(string uniqueId)
     {

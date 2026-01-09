@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChaserEnemy.cs" />
     <Compile Include="Assets\Scripts\AI.cs" />
+    <Compile Include="Assets\Scripts\FairyController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\HideZone.cs" />
@@ -71,12 +72,14 @@
     <Compile Include="Assets\Scripts\DialogueBubble.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Materials\Inventory\InventoryAsset\Inventory\InventoryScripts\InventoryInitializer.cs" />
+    <Compile Include="Assets\Scripts\DoorOut.cs" />
     <Compile Include="Assets\Materials\Inventory\InventoryAsset\InventoryController\InventoryControllerScript\InventoryController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\SaveSlotUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Scripts\StickyPlatform.cs" />
     <Compile Include="Assets\Scripts\FairyHint.cs" />
     <Compile Include="Assets\Scripts\InventoryManager.cs" />
     <Compile Include="Assets\Scenes\ExtraScene\InventoryExtraScene\Hats\Hat.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Materials\Inventory\InventoryAsset\Tests\TestScripts\Test.cs" />
     <Compile Include="Assets\Materials\Inventory\InventoryAsset\InventoryUI\Slots\SlotScripts\Slot.cs" />
     <Compile Include="Assets\Materials\Inventory\InventoryAsset\Inventory\InventoryItem\InventoryItemScript\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\RiddleMaster.cs" />
     <Compile Include="Assets\Scripts\MovingPlatforms.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
@@ -149,9 +153,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Scripts\NPC_RiddleGiver.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\InventorySlotUI.cs" />
     <Compile Include="Assets\Scripts\RespawnManager.cs" />
+    <Compile Include="Assets\Scripts\ReturnToTheStage.cs" />
     <Compile Include="Assets\Scripts\die.cs" />
     <Compile Include="Assets\HealthHeartSystem\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\DoorInteraction.cs" />
@@ -162,6 +168,7 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Materials\knigth\Knight_player_1.4\Knight_player\Read_me.txt" />
+    <None Include="Assets\Materials\people\GandalfHardcore Character Asset Pack (1)\GandalfHardcore Character Asset Pack\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -191,6 +198,7 @@
     <None Include="Assets\Materials\people\free-villagers-sprite-sheets-pixel-art\Font.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Materials\blocksForest\Pixel Art Platformer - Village Props v2.3.0\Changelog.txt" />
+    <None Include="Assets\2D Ice World\Assets\Sprites\free-winter-nature-pixel-game-backgrounds\license.txt" />
     <None Include="Assets\Materials\Inventory\InventoryAsset\Documentation\Documentation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
